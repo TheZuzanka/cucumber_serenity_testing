@@ -1,4 +1,3 @@
-### Application code
- 
-These packages generally contain application code. 
-If you are writing a reusable test library, you can also place reusable test components such as Page Objects or Tasks here.
+Original starter repository cloned from [wakaleos repository](https://github.com/serenity-bdd/serenity-cucumber4-starter)
+
+This respository is primarily used for testing serenity and cucumber abilities. 
