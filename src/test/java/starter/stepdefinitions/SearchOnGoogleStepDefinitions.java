@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import starter.navigation.NavigateToGoogle;
 import starter.search.SearchFor;
+import starter.search.SearchForPictures;
 import starter.search.SearchResult;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -17,6 +18,9 @@ public class SearchOnGoogleStepDefinitions {
 
     @Steps
     SearchFor searchFor;
+
+    @Steps
+    SearchForPictures searchForPictures;
 
     @Steps
     SearchResult searchResult;
@@ -35,5 +39,10 @@ public class SearchOnGoogleStepDefinitions {
     public void all_result_titles_should_contain_the_word_sasanka(String expectedTerm) {
         assertThat(searchResult.titles())
                 .allMatch(title -> textOf(title).containsIgnoringCase(expectedTerm));
+    }
+
+    @When("he searches for pictures")
+    public void he_searches_for_pictures() {
+        searchForPictures.click_pictures();
     }
 }
